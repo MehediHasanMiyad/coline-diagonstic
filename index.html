@@ -1,0 +1,4846 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    কলিন্স ডায়াগনস্টিক এন্ড কনসালটেশন সেন্টার
+  </title>
+
+  <meta
+    name="description"
+    content="কলিন্স ডায়াগনস্টিক এন্ড কনসালটেশন সেন্টার, বাইপাস মোড়, রাজাপুর, ঝালকাঠি। চিকিৎসক, স্বাস্থ্যসেবা ও অ্যাপয়েন্টমেন্টের জন্য যোগাযোগ করুন।"
+  >
+
+  <!-- Bengali Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================================================
+       ROOT VARIABLES
+    ========================================================= */
+
+    :root {
+
+      --primary: #f15a1b;
+      --primary-dark: #d9470e;
+      --primary-light: #fff0e7;
+      --primary-soft: #fff8f4;
+
+      --dark: #17212b;
+      --text: #586571;
+      --muted: #87919b;
+
+      --white: #ffffff;
+      --light: #fffaf7;
+
+      --border: #eee1d8;
+
+      --shadow-sm:
+        0 8px 25px rgba(35, 40, 45, 0.06);
+
+      --shadow:
+        0 20px 55px rgba(35, 40, 45, 0.11);
+
+      --container: 1180px;
+
+      --radius-sm: 12px;
+      --radius: 20px;
+      --radius-lg: 26px;
+    }
+
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+
+    body {
+      font-family: "Noto Sans Bengali", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+    }
+
+
+    .container {
+      width: min(92%, var(--container));
+      margin: 0 auto;
+    }
+
+
+    .section {
+      padding: 90px 0;
+    }
+
+
+    /* =========================================================
+       COMMON SECTION HEADING
+    ========================================================= */
+
+    .section-heading {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+
+      padding: 7px 15px;
+
+      margin-bottom: 13px;
+
+      border-radius: 50px;
+
+      background: var(--primary-light);
+      border: 1px solid #ffd5c0;
+
+      color: var(--primary-dark);
+
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+
+    .section-heading h2 {
+      margin-bottom: 13px;
+
+      color: var(--dark);
+
+      font-size: clamp(29px, 5vw, 44px);
+
+      line-height: 1.25;
+
+      letter-spacing: -0.5px;
+    }
+
+
+    .section-heading p {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+
+    /* =========================================================
+       TOP BAR
+    ========================================================= */
+
+    .top-bar {
+      padding: 9px 0;
+
+      background: var(--dark);
+
+      color: #ffffff;
+
+      font-size: 12px;
+    }
+
+
+    .top-bar-inner {
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 3px;
+
+      text-align: center;
+    }
+
+
+    .top-bar strong {
+      color: #ff9662;
+    }
+
+
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, 0.97);
+
+      backdrop-filter: blur(14px);
+
+      border-bottom: 1px solid #f1e6df;
+    }
+
+
+    .nav-inner {
+      min-height: 78px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 15px;
+    }
+
+
+    /* Logo */
+
+    .logo {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      min-width: 0;
+    }
+
+
+    .logo-image {
+      width: 48px;
+      height: 48px;
+
+      flex-shrink: 0;
+
+      overflow: hidden;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 12px;
+
+      background: #ffffff;
+    }
+
+
+    .logo-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+
+      display: block;
+    }
+
+
+    .logo-text {
+      color: var(--dark);
+
+      font-size: 15px;
+
+      font-weight: 900;
+
+      line-height: 1.3;
+    }
+
+
+    .logo-text span {
+      display: block;
+
+      margin-top: 1px;
+
+      color: var(--primary);
+
+      font-size: 10px;
+
+      font-weight: 700;
+    }
+
+
+    /* Desktop Nav */
+
+    .nav-menu {
+      display: none;
+
+      align-items: center;
+
+      gap: 22px;
+
+      list-style: none;
+    }
+
+
+    .nav-menu a {
+      color: var(--dark);
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      transition: 0.25s ease;
+    }
+
+
+    .nav-menu a:hover {
+      color: var(--primary);
+    }
+
+
+    .nav-appointment {
+      display: none;
+
+      padding: 10px 17px;
+
+      border-radius: 11px;
+
+      color: #ffffff !important;
+
+      background: var(--primary);
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      box-shadow:
+        0 8px 20px rgba(241, 90, 27, 0.2);
+
+      transition: 0.25s;
+    }
+
+
+    .nav-appointment:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+
+    /* Menu Toggle */
+
+    .menu-toggle {
+      width: 43px;
+      height: 43px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 11px;
+
+      background: #ffffff;
+
+      color: var(--dark);
+
+      font-size: 22px;
+
+      cursor: pointer;
+    }
+
+
+    /* =========================================================
+       MOBILE MENU
+    ========================================================= */
+
+    .mobile-menu {
+      position: fixed;
+
+      top: 78px;
+      left: 0;
+
+      width: 100%;
+
+      z-index: 999;
+
+      padding: 18px;
+
+      background: #ffffff;
+
+      box-shadow: var(--shadow);
+
+      transform: translateY(-150%);
+
+      transition: 0.3s ease;
+    }
+
+
+    .mobile-menu.active {
+      transform: translateY(0);
+    }
+
+
+    .mobile-menu a {
+      display: block;
+
+      padding: 12px 7px;
+
+      border-bottom: 1px solid #f2e9e3;
+
+      color: var(--dark);
+
+      font-size: 14px;
+
+      font-weight: 700;
+    }
+
+
+    .mobile-menu .mobile-cta {
+      margin-top: 12px;
+
+      border: none;
+
+      border-radius: 10px;
+
+      padding: 12px;
+
+      background: var(--primary);
+
+      color: #ffffff;
+
+      text-align: center;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      position: relative;
+
+      padding: 60px 0 85px;
+
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 95% 8%,
+          rgba(241, 90, 27, 0.15),
+          transparent 29%
+        ),
+        radial-gradient(
+          circle at 8% 90%,
+          rgba(241, 90, 27, 0.08),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #fffaf7,
+          #ffffff
+        );
+    }
+
+
+    .hero-grid {
+      display: grid;
+
+      gap: 42px;
+
+      align-items: center;
+    }
+
+
+    .hero-content {
+      text-align: center;
+    }
+
+
+    .hero-badge {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      padding: 8px 14px;
+
+      margin-bottom: 18px;
+
+      border-radius: 50px;
+
+      border: 1px solid #ffd5c0;
+
+      background: var(--primary-light);
+
+      color: var(--primary-dark);
+
+      font-size: 12px;
+
+      font-weight: 800;
+    }
+
+
+    .hero h1 {
+      margin-bottom: 18px;
+
+      color: var(--dark);
+
+      font-size: clamp(32px, 8vw, 60px);
+
+      line-height: 1.18;
+
+      letter-spacing: -1px;
+    }
+
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+
+    .hero-description {
+      max-width: 650px;
+
+      margin: 0 auto;
+
+      color: var(--text);
+
+      font-size: 14px;
+    }
+
+
+    .hero-buttons {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 11px;
+
+      margin-top: 28px;
+    }
+
+
+    .btn {
+      min-height: 50px;
+
+      padding: 12px 22px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      border: none;
+
+      border-radius: 11px;
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+      cursor: pointer;
+
+      transition: 0.25s ease;
+    }
+
+
+    .btn-primary {
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--primary),
+          #ff7540
+        );
+
+      box-shadow:
+        0 10px 25px rgba(241, 90, 27, 0.23);
+    }
+
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: var(--primary-dark);
+    }
+
+
+    .btn-outline {
+      color: var(--dark);
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+    }
+
+
+    .btn-outline:hover {
+      color: var(--primary);
+
+      border-color: #ffc8ad;
+    }
+
+
+    /* Hero Image */
+
+    .hero-image {
+      position: relative;
+    }
+
+
+    .hero-image-main {
+      overflow: hidden;
+
+      border: 7px solid #ffffff;
+
+      border-radius: 25px;
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .hero-image-main img {
+      height: 330px;
+
+      object-fit: cover;
+    }
+
+
+    .hero-floating-card {
+      position: absolute;
+
+      left: 13px;
+
+      bottom: -18px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding: 13px 15px;
+
+      border-radius: 14px;
+
+      background: #ffffff;
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .floating-icon {
+      width: 39px;
+      height: 39px;
+
+      flex-shrink: 0;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 10px;
+
+      background: var(--primary-light);
+
+      color: var(--primary);
+
+      font-size: 18px;
+
+      font-weight: 900;
+    }
+
+
+    .hero-floating-card strong {
+      display: block;
+
+      color: var(--dark);
+
+      font-size: 12px;
+    }
+
+
+    .hero-floating-card span {
+      display: block;
+
+      color: var(--muted);
+
+      font-size: 10px;
+    }
+
+
+    /* Stats */
+
+    .stats {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 12px;
+
+      margin-top: 45px;
+    }
+
+
+    .stat {
+      padding: 17px 9px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: #ffffff;
+
+      text-align: center;
+
+      box-shadow:
+        0 4px 15px rgba(241, 90, 27, 0.03);
+    }
+
+
+    .stat strong {
+      display: block;
+
+      color: var(--primary);
+
+      font-size: 23px;
+
+      line-height: 1.2;
+    }
+
+
+    .stat span {
+      color: var(--muted);
+
+      font-size: 10px;
+    }
+
+
+    /* =========================================================
+       QUICK ACTIONS
+    ========================================================= */
+
+    .quick-actions {
+      position: relative;
+
+      z-index: 5;
+
+      margin-top: -27px;
+    }
+
+
+    .quick-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 12px;
+    }
+
+
+    .quick-card {
+      padding: 20px 12px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 16px;
+
+      background: #ffffff;
+
+      text-align: center;
+
+      box-shadow: var(--shadow-sm);
+
+      transition: 0.25s;
+    }
+
+
+    .quick-card:hover {
+      transform: translateY(-4px);
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .quick-icon {
+      width: 45px;
+      height: 45px;
+
+      display: grid;
+
+      place-items: center;
+
+      margin: 0 auto 9px;
+
+      border-radius: 12px;
+
+      background: var(--primary-light);
+
+      color: var(--primary);
+
+      font-size: 20px;
+
+      font-weight: 900;
+    }
+
+
+    .quick-card h3 {
+      margin-bottom: 2px;
+
+      color: var(--dark);
+
+      font-size: 14px;
+    }
+
+
+    .quick-card p {
+      color: var(--muted);
+
+      font-size: 10px;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about {
+      background: var(--light);
+    }
+
+
+    .about-grid {
+      display: grid;
+
+      gap: 42px;
+
+      align-items: center;
+    }
+
+
+    .about-image {
+      overflow: hidden;
+
+      border-radius: 22px;
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .about-image img {
+      height: 350px;
+
+      object-fit: cover;
+    }
+
+
+    .about-content h2 {
+      margin-bottom: 14px;
+
+      color: var(--dark);
+
+      font-size: 30px;
+
+      line-height: 1.3;
+    }
+
+
+    .about-content > p {
+      margin-bottom: 20px;
+
+      font-size: 13px;
+    }
+
+
+    .about-list {
+      list-style: none;
+    }
+
+
+    .about-list li {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 10px;
+
+      margin-bottom: 11px;
+
+      font-size: 13px;
+    }
+
+
+    .check {
+      width: 23px;
+      height: 23px;
+
+      flex-shrink: 0;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--primary-light);
+
+      color: var(--primary);
+
+      font-size: 12px;
+
+      font-weight: 900;
+    }
+
+
+    /* =========================================================
+       MD SECTION
+    ========================================================= */
+
+    .md-section {
+      position: relative;
+
+      overflow: hidden;
+
+      background: #ffffff;
+    }
+
+
+    .md-section::before {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      right: -120px;
+      top: -100px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(241, 90, 27, 0.06);
+
+      pointer-events: none;
+    }
+
+
+    .md-card {
+      position: relative;
+
+      display: grid;
+
+      gap: 28px;
+
+      padding: 18px;
+
+      overflow: hidden;
+
+      border: 1px solid #efdcd0;
+
+      border-radius: var(--radius-lg);
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff7f1 0%,
+          #ffffff 65%
+        );
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .md-image-wrap {
+      position: relative;
+    }
+
+
+    .md-image {
+      position: relative;
+
+      overflow: hidden;
+
+      border-radius: 21px;
+    }
+
+
+    .md-image img {
+      height: 350px;
+
+      object-fit: cover;
+    }
+
+
+    .md-image::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(20, 27, 33, 0.30),
+          transparent 45%
+        );
+    }
+
+
+    .md-role-badge {
+      position: absolute;
+
+      left: 14px;
+      bottom: 14px;
+
+      z-index: 2;
+
+      padding: 7px 12px;
+
+      border-radius: 9px;
+
+      color: #ffffff;
+
+      background:
+        rgba(241, 90, 27, 0.95);
+
+      font-size: 11px;
+
+      font-weight: 800;
+    }
+
+
+    .md-content {
+      padding: 5px 3px 8px;
+    }
+
+
+    .md-content .section-tag {
+      margin-bottom: 10px;
+    }
+
+
+    .md-content h2 {
+      margin-bottom: 7px;
+
+      color: var(--dark);
+
+      font-size: clamp(30px, 5vw, 43px);
+
+      line-height: 1.2;
+    }
+
+
+    .md-designation {
+      margin-bottom: 18px;
+
+      color: var(--primary);
+
+      font-size: 14px;
+
+      font-weight: 800;
+    }
+
+
+    .md-intro {
+      margin-bottom: 20px;
+
+      color: var(--text);
+
+      font-size: 14px;
+    }
+
+
+    .md-message {
+      padding: 17px;
+
+      border-left: 4px solid var(--primary);
+
+      border-radius: 0 14px 14px 0;
+
+      background: #ffffff;
+
+      box-shadow:
+        0 8px 25px rgba(38, 43, 49, 0.05);
+    }
+
+
+    .md-message-title {
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      margin-bottom: 8px;
+
+      color: var(--dark);
+
+      font-size: 14px;
+
+      font-weight: 900;
+    }
+
+
+    .md-message-icon {
+      width: 30px;
+      height: 30px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 8px;
+
+      background: var(--primary-light);
+
+      color: var(--primary);
+
+      font-size: 14px;
+    }
+
+
+    .md-message p {
+      color: var(--text);
+
+      font-size: 13px;
+    }
+
+
+    .md-footer {
+      display: flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      margin-top: 18px;
+
+      padding-top: 16px;
+
+      border-top: 1px solid #eee2da;
+    }
+
+
+    .md-sign {
+      width: 40px;
+      height: 40px;
+
+      flex-shrink: 0;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 11px;
+
+      background: var(--primary);
+
+      color: #ffffff;
+
+      font-size: 16px;
+
+      font-weight: 900;
+    }
+
+
+    .md-footer strong {
+      display: block;
+
+      color: var(--dark);
+
+      font-size: 13px;
+    }
+
+
+    .md-footer span {
+      display: block;
+
+      color: var(--muted);
+
+      font-size: 10px;
+    }
+
+
+    /* =========================================================
+       SERVICES
+    ========================================================= */
+
+    .services {
+      background: var(--light);
+    }
+
+
+    .service-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 14px;
+    }
+
+
+    .service-card {
+      padding: 23px 16px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 17px;
+
+      background: #ffffff;
+
+      transition: 0.25s;
+    }
+
+
+    .service-card:hover {
+      transform: translateY(-4px);
+
+      border-color: #ffd0b8;
+
+      box-shadow: var(--shadow-sm);
+    }
+
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+
+      display: grid;
+
+      place-items: center;
+
+      margin-bottom: 13px;
+
+      border-radius: 13px;
+
+      background: var(--primary-light);
+
+      color: var(--primary);
+
+      font-size: 21px;
+
+      font-weight: 900;
+    }
+
+
+    .service-card h3 {
+      margin-bottom: 5px;
+
+      color: var(--dark);
+
+      font-size: 15px;
+    }
+
+
+    .service-card p {
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       DOCTORS
+    ========================================================= */
+
+    .doctor-grid {
+      display: grid;
+
+      gap: 18px;
+    }
+
+
+    .doctor-card {
+      overflow: hidden;
+
+      border: 1px solid var(--border);
+
+      border-radius: 20px;
+
+      background: #ffffff;
+
+      box-shadow: var(--shadow-sm);
+
+      transition: 0.3s;
+    }
+
+
+    .doctor-card:hover {
+      transform: translateY(-5px);
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .doctor-image {
+      position: relative;
+
+      background: #fff3ec;
+    }
+
+
+    .doctor-image img {
+      height: 280px;
+
+      object-fit: cover;
+    }
+
+
+    .doctor-specialty {
+      position: absolute;
+
+      left: 14px;
+      bottom: 14px;
+
+      padding: 6px 10px;
+
+      border-radius: 7px;
+
+      background: var(--primary);
+
+      color: #ffffff;
+
+      font-size: 9px;
+
+      font-weight: 800;
+    }
+
+
+    .doctor-content {
+      padding: 18px;
+    }
+
+
+    .doctor-content h3 {
+      margin-bottom: 5px;
+
+      color: var(--dark);
+
+      font-size: 18px;
+
+      line-height: 1.4;
+    }
+
+
+    .doctor-degree {
+      margin-bottom: 8px;
+
+      color: var(--primary);
+
+      font-size: 11px;
+
+      line-height: 1.7;
+
+      font-weight: 800;
+    }
+
+
+    .doctor-info {
+      min-height: 80px;
+
+      margin-bottom: 13px;
+
+      font-size: 11px;
+    }
+
+
+    .doctor-time {
+      padding: 11px;
+
+      margin-bottom: 13px;
+
+      border-radius: 10px;
+
+      background: var(--primary-light);
+
+      color: var(--primary-dark);
+
+      font-size: 11px;
+
+      font-weight: 800;
+    }
+
+
+    .doctor-btn {
+      width: 100%;
+    }
+
+
+    /* =========================================================
+       GALLERY
+    ========================================================= */
+
+    .gallery {
+      background: var(--light);
+    }
+
+
+    .gallery-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 13px;
+    }
+
+
+    .gallery-item {
+      position: relative;
+
+      height: 210px;
+
+      overflow: hidden;
+
+      border-radius: 17px;
+
+      background: #eeeeee;
+
+      cursor: pointer;
+
+      box-shadow: var(--shadow-sm);
+    }
+
+
+    .gallery-item img {
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: 0.5s ease;
+    }
+
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+
+    .gallery-overlay {
+      position: absolute;
+
+      inset: 0;
+
+      display: flex;
+
+      align-items: flex-end;
+
+      justify-content: space-between;
+
+      padding: 15px;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,0.72),
+          transparent 65%
+        );
+
+      color: #ffffff;
+
+      opacity: 0;
+
+      transition: 0.3s;
+    }
+
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+
+    .gallery-overlay span {
+      font-size: 12px;
+
+      font-weight: 800;
+    }
+
+
+    .gallery-overlay i {
+      width: 34px;
+      height: 34px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--primary);
+
+      font-size: 20px;
+
+      font-style: normal;
+    }
+
+
+    /* =========================================================
+       WHY US
+    ========================================================= */
+
+    .why-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 14px;
+    }
+
+
+    .why-card {
+      padding: 22px 16px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 17px;
+
+      background: #ffffff;
+    }
+
+
+    .why-number {
+      width: 37px;
+      height: 37px;
+
+      display: grid;
+
+      place-items: center;
+
+      margin-bottom: 12px;
+
+      border-radius: 10px;
+
+      background: var(--primary);
+
+      color: #ffffff;
+
+      font-size: 11px;
+
+      font-weight: 900;
+    }
+
+
+    .why-card h3 {
+      margin-bottom: 5px;
+
+      color: var(--dark);
+
+      font-size: 15px;
+    }
+
+
+    .why-card p {
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       APPOINTMENT PROCESS
+    ========================================================= */
+
+    .process {
+      background: var(--light);
+    }
+
+
+    .process-grid {
+      display: grid;
+
+      gap: 15px;
+    }
+
+
+    .process-card {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 15px;
+
+      padding: 23px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 17px;
+
+      background: #ffffff;
+    }
+
+
+    .process-number {
+      width: 40px;
+      height: 40px;
+
+      flex-shrink: 0;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--primary-light);
+
+      color: var(--primary);
+
+      font-weight: 900;
+    }
+
+
+    .process-card h3 {
+      color: var(--dark);
+
+      font-size: 15px;
+    }
+
+
+    .process-card p {
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       CTA
+    ========================================================= */
+
+    .cta {
+      padding: 80px 0;
+
+      color: #ffffff;
+
+      background:
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(255, 255, 255, 0.18),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #e95110,
+          #f46625 52%,
+          #ff793b
+        );
+    }
+
+
+    .cta-content {
+      max-width: 720px;
+
+      margin: auto;
+
+      text-align: center;
+    }
+
+
+    .cta h2 {
+      margin-bottom: 13px;
+
+      font-size: clamp(27px, 6vw, 43px);
+
+      line-height: 1.3;
+    }
+
+
+    .cta p {
+      margin-bottom: 25px;
+
+      font-size: 14px;
+
+      opacity: 0.93;
+    }
+
+
+    .cta .btn {
+      color: var(--primary);
+
+      background: #ffffff;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact {
+      background: #ffffff;
+    }
+
+
+    .contact-grid {
+      display: grid;
+
+      gap: 30px;
+    }
+
+
+    .contact-info h2 {
+      margin-bottom: 13px;
+
+      color: var(--dark);
+
+      font-size: 30px;
+
+      line-height: 1.3;
+    }
+
+
+    .contact-info > p {
+      margin-bottom: 25px;
+
+      font-size: 13px;
+    }
+
+
+    .contact-item {
+      display: flex;
+
+      gap: 13px;
+
+      margin-bottom: 17px;
+    }
+
+
+    .contact-icon {
+      width: 43px;
+      height: 43px;
+
+      flex-shrink: 0;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 11px;
+
+      background: var(--primary-light);
+
+      color: var(--primary);
+
+      font-size: 18px;
+
+      font-weight: 900;
+    }
+
+
+    .contact-item strong {
+      display: block;
+
+      color: var(--dark);
+
+      font-size: 13px;
+    }
+
+
+    .contact-item span,
+    .contact-item a {
+      color: var(--text);
+
+      font-size: 12px;
+    }
+
+
+    .map-box {
+      min-height: 350px;
+
+      overflow: hidden;
+
+      border: 1px solid var(--border);
+
+      border-radius: 20px;
+
+      box-shadow: var(--shadow-sm);
+    }
+
+
+    .map-box iframe {
+      width: 100%;
+      height: 100%;
+
+      min-height: 350px;
+
+      border: 0;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding: 58px 0 25px;
+
+      background: var(--dark);
+
+      color: #c5cdd3;
+    }
+
+
+    .footer-grid {
+      display: grid;
+
+      gap: 30px;
+    }
+
+
+    .footer-brand h3 {
+      margin-bottom: 10px;
+
+      color: #ffffff;
+
+      font-size: 19px;
+    }
+
+
+    .footer-brand p {
+      max-width: 380px;
+
+      font-size: 12px;
+    }
+
+
+    .footer-col h4 {
+      margin-bottom: 12px;
+
+      color: #ffffff;
+
+      font-size: 14px;
+    }
+
+
+    .footer-col a {
+      display: block;
+
+      margin-bottom: 7px;
+
+      font-size: 12px;
+
+      transition: 0.2s;
+    }
+
+
+    .footer-col a:hover {
+      color: #ff9768;
+    }
+
+
+    .footer-bottom {
+      margin-top: 35px;
+
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(255,255,255,0.1);
+
+      text-align: center;
+
+      font-size: 10px;
+
+      line-height: 1.9;
+    }
+
+
+    .footer-credit {
+      margin-top: 5px;
+
+      color: #aeb7bf;
+    }
+
+
+    .footer-credit strong {
+      color: #ff8752;
+    }
+
+
+    .footer-credit a {
+      color: #ff8752;
+
+      font-weight: 900;
+    }
+
+
+    /* =========================================================
+       WHATSAPP FLOAT
+    ========================================================= */
+
+    .whatsapp-float {
+      position: fixed;
+
+      right: 17px;
+      bottom: 17px;
+
+      z-index: 900;
+
+      width: 56px;
+      height: 56px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: #25d366;
+
+      color: #ffffff;
+
+      font-size: 23px;
+
+      font-weight: 900;
+
+      box-shadow:
+        0 10px 25px rgba(37,211,102,0.35);
+
+      animation: whatsappPulse 2s infinite;
+    }
+
+
+    @keyframes whatsappPulse {
+
+      0% {
+        box-shadow:
+          0 0 0 0 rgba(37,211,102,0.35);
+      }
+
+      70% {
+        box-shadow:
+          0 0 0 12px rgba(37,211,102,0);
+      }
+
+      100% {
+        box-shadow:
+          0 0 0 0 rgba(37,211,102,0);
+      }
+
+    }
+
+
+    /* =========================================================
+       APPOINTMENT MODAL
+    ========================================================= */
+
+    .modal {
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 3000;
+
+      display: none;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 18px;
+
+      background:
+        rgba(0, 0, 0, 0.65);
+    }
+
+
+    .modal.active {
+      display: flex;
+    }
+
+
+    .modal-box {
+      position: relative;
+
+      width: min(100%, 520px);
+
+      max-height: 90vh;
+
+      overflow-y: auto;
+
+      padding: 25px;
+
+      border-radius: 20px;
+
+      background: #ffffff;
+    }
+
+
+    .modal-close {
+      position: absolute;
+
+      top: 14px;
+      right: 14px;
+
+      width: 35px;
+      height: 35px;
+
+      border: none;
+
+      border-radius: 50%;
+
+      background: var(--primary-light);
+
+      color: var(--primary);
+
+      font-size: 22px;
+
+      cursor: pointer;
+    }
+
+
+    .modal-box h2 {
+      margin-bottom: 5px;
+
+      color: var(--dark);
+
+      font-size: 24px;
+    }
+
+
+    .modal-box > p {
+      margin-bottom: 20px;
+
+      font-size: 12px;
+    }
+
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+
+    .form-group label {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: var(--dark);
+
+      font-size: 12px;
+
+      font-weight: 800;
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+
+      padding: 11px 12px;
+
+      outline: none;
+
+      border: 1px solid #e5ddd7;
+
+      border-radius: 10px;
+
+      background: #ffffff;
+
+      font-size: 13px;
+    }
+
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+    }
+
+
+    .form-group textarea {
+      min-height: 80px;
+
+      resize: vertical;
+    }
+
+
+    /* =========================================================
+       GALLERY LIGHTBOX
+    ========================================================= */
+
+    .lightbox {
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 4000;
+
+      display: none;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 20px;
+
+      background: rgba(0,0,0,0.92);
+    }
+
+
+    .lightbox.active {
+      display: flex;
+    }
+
+
+    .lightbox img {
+      width: auto;
+
+      max-width: 95%;
+
+      max-height: 85vh;
+
+      object-fit: contain;
+
+      border-radius: 10px;
+    }
+
+
+    .lightbox-close {
+      position: absolute;
+
+      top: 18px;
+      right: 22px;
+
+      width: 45px;
+      height: 45px;
+
+      border: none;
+
+      border-radius: 50%;
+
+      background: var(--primary);
+
+      color: #ffffff;
+
+      font-size: 28px;
+
+      cursor: pointer;
+    }
+
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media (min-width: 600px) {
+
+      .top-bar-inner {
+        flex-direction: row;
+
+        justify-content: space-between;
+      }
+
+
+      .hero-buttons {
+        flex-direction: row;
+
+        justify-content: center;
+      }
+
+
+      .quick-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+
+      .doctor-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+      .gallery-item {
+        height: 250px;
+      }
+
+
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+
+    }
+
+
+    /* =========================================================
+       DESKTOP
+    ========================================================= */
+
+    @media (min-width: 900px) {
+
+      .nav-menu {
+        display: flex;
+      }
+
+
+      .nav-appointment {
+        display: inline-flex;
+
+        align-items: center;
+      }
+
+
+      .menu-toggle,
+      .mobile-menu {
+        display: none;
+      }
+
+
+      .hero {
+        padding: 85px 0 95px;
+      }
+
+
+      .hero-grid {
+        grid-template-columns: 1.05fr 0.95fr;
+
+        gap: 65px;
+      }
+
+
+      .hero-content {
+        text-align: left;
+      }
+
+
+      .hero-description {
+        margin: 0;
+      }
+
+
+      .hero-buttons {
+        justify-content: flex-start;
+      }
+
+
+      .hero-image-main img {
+        height: 510px;
+      }
+
+
+      .stats {
+        max-width: 650px;
+
+        grid-template-columns:
+          repeat(4, 1fr);
+      }
+
+
+      .quick-actions {
+        margin-top: -35px;
+      }
+
+
+      .about-grid {
+        grid-template-columns: 0.9fr 1.1fr;
+
+        gap: 70px;
+      }
+
+
+      .about-image img {
+        height: 480px;
+      }
+
+
+      .md-card {
+        grid-template-columns: 0.78fr 1.22fr;
+
+        gap: 46px;
+
+        padding: 30px;
+      }
+
+
+      .md-image img {
+        height: 470px;
+      }
+
+
+      .md-content {
+        padding: 8px 8px 8px 0;
+      }
+
+
+      .service-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+
+      .doctor-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+
+      .doctor-image img {
+        height: 300px;
+      }
+
+
+      .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+
+      .gallery-item {
+        height: 300px;
+      }
+
+
+      .why-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+
+      .process-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+
+      .contact-grid {
+        grid-template-columns: 0.8fr 1.2fr;
+
+        gap: 60px;
+
+        align-items: center;
+      }
+
+
+      .map-box,
+      .map-box iframe {
+        min-height: 430px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =======================================================
+       TOP BAR
+  ======================================================== -->
+
+  <div class="top-bar">
+
+    <div class="container top-bar-inner">
+
+      <div>
+        জরুরি প্রয়োজনে যোগাযোগ করুন
+      </div>
+
+      <div>
+        প্রতিদিন
+        <strong>
+          সকাল ৮টা – রাত ৯টা
+        </strong>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =======================================================
+       NAVBAR
+  ======================================================== -->
+
+  <header class="navbar">
+
+    <div class="container nav-inner">
+
+
+      <!-- LOGO -->
+
+      <a href="#home" class="logo">
+
+        <div class="logo-image">
+
+          <!-- YOUR LOGO IMAGE -->
+          <img
+            src=".//WhatsApp Image 2026-10-06 at 10.10.13 PM.jpeg"
+            alt="কলিন্স ডায়াগনস্টিক এন্ড কনসালটেশন সেন্টারের লোগো"
+          >
+
+        </div>
+
+
+        <div class="logo-text">
+
+          কলিন্স ডায়াগনস্টিক
+
+          <span>
+            এন্ড কনসালটেশন সেন্টার
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- DESKTOP NAV -->
+
+      <nav>
+
+        <ul class="nav-menu">
+
+          <li>
+            <a href="#home">
+              হোম
+            </a>
+          </li>
+
+          <li>
+            <a href="#about">
+              আমাদের সম্পর্কে
+            </a>
+          </li>
+
+          <li>
+            <a href="#services">
+              সেবাসমূহ
+            </a>
+          </li>
+
+          <li>
+            <a href="#doctors">
+              চিকিৎসক
+            </a>
+          </li>
+
+          <li>
+            <a href="#gallery">
+              গ্যালারি
+            </a>
+          </li>
+
+          <li>
+            <a href="#why-us">
+              কেন আমরা
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact">
+              যোগাযোগ
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+      <!-- DESKTOP APPOINTMENT -->
+
+      <a
+        href="#"
+        class="nav-appointment appointment-btn"
+      >
+        অ্যাপয়েন্টমেন্ট
+      </a>
+
+
+
+      <!-- MOBILE BUTTON -->
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+      >
+        ☰
+      </button>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =======================================================
+       MOBILE MENU
+  ======================================================== -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <a href="#home">
+      হোম
+    </a>
+
+    <a href="#about">
+      আমাদের সম্পর্কে
+    </a>
+
+    <a href="#services">
+      সেবাসমূহ
+    </a>
+
+    <a href="#doctors">
+      চিকিৎসক
+    </a>
+
+    <a href="#gallery">
+      গ্যালারি
+    </a>
+
+    <a href="#why-us">
+      কেন আমরা
+    </a>
+
+    <a href="#contact">
+      যোগাযোগ
+    </a>
+
+    <a
+      href="#"
+      class="mobile-cta appointment-btn"
+    >
+      অ্যাপয়েন্টমেন্ট নিন
+    </a>
+
+  </div>
+
+
+
+  <!-- =======================================================
+       MAIN
+  ======================================================== -->
+
+  <main>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section
+      class="hero"
+      id="home"
+    >
+
+      <div class="container hero-grid">
+
+
+        <div class="hero-content">
+
+
+          <div class="hero-badge">
+            ✦ বিশ্বস্ত স্বাস্থ্যসেবার ঠিকানা
+          </div>
+
+
+          <h1>
+
+            আপনার সুস্থতার জন্য
+
+            <span>
+              নির্ভরযোগ্য
+            </span>
+
+            চিকিৎসাসেবা
+
+          </h1>
+
+
+          <p class="hero-description">
+
+            কলিন্স ডায়াগনস্টিক এন্ড কনসালটেশন সেন্টারে
+            অভিজ্ঞ চিকিৎসকদের পরামর্শ ও প্রয়োজনীয়
+            স্বাস্থ্যসেবা গ্রহণ করুন।
+
+          </p>
+
+
+          <div class="hero-buttons">
+
+            <a
+              href="#"
+              class="btn btn-primary appointment-btn"
+            >
+              📅 অ্যাপয়েন্টমেন্ট নিন
+            </a>
+
+
+            <a
+              href="#doctors"
+              class="btn btn-outline"
+            >
+              👨‍⚕️ চিকিৎসক দেখুন
+            </a>
+
+          </div>
+
+
+
+          <div class="stats">
+
+
+            <div class="stat">
+
+              <strong>
+                ৪
+              </strong>
+
+              <span>
+                চিকিৎসক
+              </span>
+
+            </div>
+
+
+            <div class="stat">
+
+              <strong>
+                ১২+
+              </strong>
+
+              <span>
+                ঘণ্টা সেবা
+              </span>
+
+            </div>
+
+
+            <div class="stat">
+
+              <strong>
+                ৭
+              </strong>
+
+              <span>
+                দিন সেবা
+              </span>
+
+            </div>
+
+
+            <div class="stat">
+
+              <strong>
+                ১
+              </strong>
+
+              <span>
+                বিশ্বস্ত ঠিকানা
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- HERO IMAGE -->
+
+        <div class="hero-image">
+
+          <div class="hero-image-main">
+
+            <img
+              src=".//WhatsApp Image 2026-10-06 at 10.16.39 PM.jpeg"
+              alt="কলিন্স ডায়াগনস্টিক এন্ড কনসালটেশন সেন্টার"
+            >
+
+          </div>
+
+
+          <div class="hero-floating-card">
+
+            <div class="floating-icon">
+              ✓
+            </div>
+
+            <div>
+
+              <strong>
+                সহজে অ্যাপয়েন্টমেন্ট নিন
+              </strong>
+
+              <span>
+                হোয়াটসঅ্যাপে যোগাযোগ করুন
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUICK ACTION
+    ====================================================== -->
+
+    <section class="quick-actions">
+
+      <div class="container">
+
+        <div class="quick-grid">
+
+
+          <a
+            href="tel:01630105000"
+            class="quick-card"
+          >
+
+            <div class="quick-icon">
+              ☎
+            </div>
+
+            <h3>
+              কল করুন
+            </h3>
+
+            <p>
+              01630105000
+            </p>
+
+          </a>
+
+
+
+          <a
+            href="https://wa.me/8801630105000"
+            target="_blank"
+            class="quick-card"
+          >
+
+            <div class="quick-icon">
+              ◉
+            </div>
+
+            <h3>
+              হোয়াটসঅ্যাপ
+            </h3>
+
+            <p>
+              মেসেজ করুন
+            </p>
+
+          </a>
+
+
+
+          <a
+            href="#doctors"
+            class="quick-card"
+          >
+
+            <div class="quick-icon">
+              +
+            </div>
+
+            <h3>
+              চিকিৎসক
+            </h3>
+
+            <p>
+              চিকিৎসক দেখুন
+            </p>
+
+          </a>
+
+
+
+          <a
+            href="#contact"
+            class="quick-card"
+          >
+
+            <div class="quick-icon">
+              ⌖
+            </div>
+
+            <h3>
+              ঠিকানা
+            </h3>
+
+            <p>
+              রাজাপুর, ঝালকাঠি
+            </p>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section
+      class="section about"
+      id="about"
+    >
+
+      <div class="container about-grid">
+
+
+        <div class="about-image">
+
+          <img
+            src=".//WhatsApp Image 2026-10-06 at 10.10.13 PM.jpeg"
+            alt="কলিন্স ডায়াগনস্টিক সেন্টার"
+          >
+
+        </div>
+
+
+
+        <div class="about-content">
+
+          <span class="section-tag">
+            আমাদের সম্পর্কে
+          </span>
+
+
+          <h2>
+            আপনার স্বাস্থ্য, আমাদের দায়িত্ব
+          </h2>
+
+
+          <p>
+
+            কলিন্স ডায়াগনস্টিক এন্ড কনসালটেশন সেন্টার
+            রাজাপুর, ঝালকাঠিতে স্বাস্থ্যসেবা গ্রহণের
+            জন্য একটি সহজ ও নির্ভরযোগ্য ঠিকানা।
+
+          </p>
+
+
+          <ul class="about-list">
+
+
+            <li>
+
+              <span class="check">
+                ✓
+              </span>
+
+              অভিজ্ঞ ও যোগ্য চিকিৎসকদের পরামর্শ
+
+            </li>
+
+
+            <li>
+
+              <span class="check">
+                ✓
+              </span>
+
+              বিভিন্ন স্বাস্থ্য সমস্যায় চিকিৎসা পরামর্শ
+
+            </li>
+
+
+            <li>
+
+              <span class="check">
+                ✓
+              </span>
+
+              সহজে অ্যাপয়েন্টমেন্ট নেওয়ার সুবিধা
+
+            </li>
+
+
+            <li>
+
+              <span class="check">
+                ✓
+              </span>
+
+              প্রতিদিন সকাল থেকে রাত পর্যন্ত যোগাযোগের সুবিধা
+
+            </li>
+
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MD SECTION
+    ====================================================== -->
+
+    <section class="section md-section">
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+          <span class="section-tag">
+            ব্যবস্থাপনা
+          </span>
+
+          <h2>
+            প্রতিষ্ঠানের নেতৃত্বে
+          </h2>
+
+          <p>
+            কলিন্স ডায়াগনস্টিক এন্ড কনসালটেশন সেন্টারের
+            ব্যবস্থাপনা পরিচালকের পরিচিতি।
+          </p>
+
+        </div>
+
+
+
+        <div class="md-card">
+
+
+          <!-- IMAGE -->
+
+          <div class="md-image-wrap">
+
+            <div class="md-image">
+
+              <img
+                src=".//WhatsApp Image 2026-10-06 at 10.10.12 PM.jpeg"
+                alt="মেহেদী হাসান কলিন্স"
+              >
+
+            </div>
+
+
+            <div class="md-role-badge">
+              ব্যবস্থাপনা পরিচালক
+            </div>
+
+          </div>
+
+
+
+          <!-- CONTENT -->
+
+          <div class="md-content">
+
+
+            <span class="section-tag">
+              মেহেদী হাসান কলিন্স
+            </span>
+
+
+            <h2>
+              মেহেদী হাসান কলিন্স
+            </h2>
+
+
+            <div class="md-designation">
+              ব্যবস্থাপনা পরিচালক
+            </div>
+
+
+            <p class="md-intro">
+
+              মেহেদী হাসান কলিন্স
+              কলিন্স ডায়াগনস্টিক এন্ড কনসালটেশন সেন্টারের
+              ব্যবস্থাপনা পরিচালক।
+
+            </p>
+
+
+
+            <div class="md-message">
+
+
+              <div class="md-message-title">
+
+                <div class="md-message-icon">
+                  ✦
+                </div>
+
+                স্বাস্থ্য সচেতনতার বার্তা
+
+              </div>
+
+
+              <p>
+
+                নিজের ও পরিবারের স্বাস্থ্যের প্রতি সচেতন থাকা,
+                প্রয়োজন অনুযায়ী চিকিৎসকের পরামর্শ নেওয়া এবং
+                স্বাস্থ্য সমস্যাকে অবহেলা না করা গুরুত্বপূর্ণ।
+                প্রয়োজন হলে সময়মতো যোগ্য চিকিৎসকের পরামর্শ
+                গ্রহণ করুন।
+
+              </p>
+
+            </div>
+
+
+
+            <div class="md-footer">
+
+
+              <div class="md-sign">
+                M
+              </div>
+
+
+              <div>
+
+                <strong>
+                  মেহেদী হাসান কলিন্স
+                </strong>
+
+                <span>
+                  ব্যবস্থাপনা পরিচালক ·
+                  কলিন্স ডায়াগনস্টিক
+                  এন্ড কনসালটেশন সেন্টার
+                </span>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
+
+    <section
+      class="section services"
+      id="services"
+    >
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+          <span class="section-tag">
+            আমাদের সেবাসমূহ
+          </span>
+
+          <h2>
+            আপনার প্রয়োজনীয় স্বাস্থ্যসেবা
+          </h2>
+
+          <p>
+            স্বাস্থ্য সংক্রান্ত প্রয়োজনীয় পরামর্শের জন্য
+            আমাদের সাথে যোগাযোগ করুন।
+          </p>
+
+        </div>
+
+
+
+        <div class="service-grid">
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              +
+            </div>
+
+            <h3>
+              মেডিসিন
+            </h3>
+
+            <p>
+              বিভিন্ন সাধারণ ও জটিল স্বাস্থ্য সমস্যায়
+              চিকিৎসকের পরামর্শ।
+            </p>
+
+          </div>
+
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              ♀
+            </div>
+
+            <h3>
+              গাইনী ও মা-শিশু
+            </h3>
+
+            <p>
+              নারী ও শিশুদের প্রয়োজনীয় চিকিৎসা পরামর্শ।
+            </p>
+
+          </div>
+
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              ◈
+            </div>
+
+            <h3>
+              চর্ম ও এলার্জি
+            </h3>
+
+            <p>
+              চর্ম, যৌন ও এলার্জি সংক্রান্ত চিকিৎসা পরামর্শ।
+            </p>
+
+          </div>
+
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              ⌁
+            </div>
+
+            <h3>
+              অর্থোপেডিক
+            </h3>
+
+            <p>
+              হাড়, জয়েন্ট ও অর্থোপেডিক সমস্যায়
+              বিশেষজ্ঞ পরামর্শ।
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DOCTORS
+    ====================================================== -->
+
+    <section
+      class="section"
+      id="doctors"
+    >
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+          <span class="section-tag">
+            আমাদের চিকিৎসক
+          </span>
+
+          <h2>
+            অভিজ্ঞ চিকিৎসকদের পরামর্শ নিন
+          </h2>
+
+          <p>
+            আপনার প্রয়োজন অনুযায়ী চিকিৎসক নির্বাচন করে
+            সহজে অ্যাপয়েন্টমেন্ট নিতে পারেন।
+          </p>
+
+        </div>
+
+
+
+        <div class="doctor-grid">
+
+
+          <!-- DOCTOR 1 -->
+
+          <div class="doctor-card">
+
+
+            <div class="doctor-image">
+
+              <img
+                src=".//WhatsApp Image 2026-10-06 at 10.19.42 PM (1).jpeg"
+                alt="ডা: ফারাহ মান্নান মম"
+              >
+
+              <span class="doctor-specialty">
+                মেডিসিন • গাইনী • মা ও শিশু
+              </span>
+
+            </div>
+
+
+
+            <div class="doctor-content">
+
+
+              <h3>
+                ডা: ফারাহ মান্নান মম
+              </h3>
+
+
+              <div class="doctor-degree">
+
+                এমবিবিএস,
+                সিসিডি (বারডেম),
+                সিএমইউ (আল্ট্রাসনোগ্রাফি)
+
+              </div>
+
+
+              <p class="doctor-info">
+
+                ডায়াবেটিস রোগে অভিজ্ঞ।
+                <br>
+
+                পরিচালক,
+                কলিন্স ডায়াগনস্টিক
+                এন্ড কনসালটেশন সেন্টার।
+
+              </p>
+
+
+              <div class="doctor-time">
+
+                🕐 প্রতিদিন সকাল ৮টা থেকে
+                রাত ৯টা পর্যন্ত
+
+              </div>
+
+
+              <button
+                class="btn btn-primary doctor-btn appointment-btn"
+                data-doctor="ডা: ফারাহ মান্নান মম"
+              >
+                অ্যাপয়েন্টমেন্ট নিন
+              </button>
+
+
+            </div>
+
+          </div>
+
+
+
+          <!-- DOCTOR 2 -->
+
+          <div class="doctor-card">
+
+
+            <div class="doctor-image">
+
+              <img
+                src=".//WhatsApp Image 2026-10-06 at 10.19.51 PM.jpeg"
+                alt="ডা: এস. ডব্লিউ ফয়সাল আহমেদ"
+              >
+
+              <span class="doctor-specialty">
+                চর্ম ও যৌন বিশেষজ্ঞ
+              </span>
+
+            </div>
+
+
+
+            <div class="doctor-content">
+
+
+              <h3>
+                ডা: এস. ডব্লিউ ফয়সাল আহমেদ
+              </h3>
+
+
+              <div class="doctor-degree">
+
+                এমবিবিএস,
+                বিসিএস (স্বাস্থ্য),
+                এমপিএইচ (আর.এইচ.এইচ),
+                পিজিটি
+
+              </div>
+
+
+              <p class="doctor-info">
+
+                চর্ম, যৌন, এলার্জি ও মেডিসিন চিকিৎসক।
+                <br>
+
+                শের-ই-বাংলা মেডিকেল কলেজ হাসপাতাল,
+                বরিশাল।
+
+              </p>
+
+
+              <div class="doctor-time">
+
+                🕐 প্রতি রবিবার,
+                বিকাল ৪টা থেকে রাত ৮টা পর্যন্ত
+
+              </div>
+
+
+              <button
+                class="btn btn-primary doctor-btn appointment-btn"
+                data-doctor="ডা: এস. ডব্লিউ ফয়সাল আহমেদ"
+              >
+                অ্যাপয়েন্টমেন্ট নিন
+              </button>
+
+
+            </div>
+
+          </div>
+
+
+
+          <!-- DOCTOR 3 -->
+
+          <div class="doctor-card">
+
+
+            <div class="doctor-image">
+
+              <img
+                src=".//WhatsApp Image 2026-10-06 at 10.19.42 PM.jpeg"
+                alt="ডা: শেখ ফারুক আল শাহেদ"
+              >
+
+              <span class="doctor-specialty">
+                অর্থোপেডিক বিশেষজ্ঞ ও সার্জন
+              </span>
+
+            </div>
+
+
+
+            <div class="doctor-content">
+
+
+              <h3>
+                ডা: শেখ ফারুক আল শাহেদ
+              </h3>
+
+
+              <div class="doctor-degree">
+
+                এমবিবিএস,
+                বিসিএস (স্বাস্থ্য),
+                এফসিপিএস
+                (অর্থোপেডিক সার্জারি)
+
+              </div>
+
+
+              <p class="doctor-info">
+
+                এফসিপিএস
+                (অর্থোপেডিক সার্জারি)
+                শেষ পর্ব।
+                <br>
+
+                রেজিস্ট্রার
+                (সার্জারি বিভাগ),
+                শের-ই-বাংলা মেডিকেল কলেজ হাসপাতাল,
+                বরিশাল।
+
+              </p>
+
+
+              <div class="doctor-time">
+
+                🕐 প্রতি রবিবার,
+                বিকাল ৩টা থেকে রাত ৮টা পর্যন্ত
+
+              </div>
+
+
+              <button
+                class="btn btn-primary doctor-btn appointment-btn"
+                data-doctor="ডা: শেখ ফারুক আল শাহেদ"
+              >
+                অ্যাপয়েন্টমেন্ট নিন
+              </button>
+
+
+            </div>
+
+          </div>
+
+
+
+          <!-- DOCTOR 4 -->
+
+          <div class="doctor-card">
+
+
+            <div class="doctor-image">
+
+              <img
+                src=".//WhatsApp Image 2026-10-06 at 10.19.41 PM.jpeg"
+                alt="ডা: মেহেদী হক"
+              >
+
+              <span class="doctor-specialty">
+                মেডিসিন • নাক, কান ও গলা
+              </span>
+
+            </div>
+
+
+
+            <div class="doctor-content">
+
+
+              <h3>
+                ডা: মেহেদী হক
+              </h3>
+
+
+              <div class="doctor-degree">
+
+                এমবিবিএস,
+                বিসিএস (এমডি কোর্স),
+                সিডিএম (ডায়াবেটিস),
+                ডিএমইউ (আল্ট্রা)
+
+              </div>
+
+
+              <p class="doctor-info">
+
+                পিজিটি
+                (মেডিসিন ও নাক, কান, গলা)।
+                <br>
+
+                মেডিকেল অফিসার,
+                বিভাগীয় পুলিশ হাসপাতাল,
+                বরিশাল।
+
+              </p>
+
+
+              <div class="doctor-time">
+
+                🕐 প্রতি সোমবার,
+                বিকাল ৪টা থেকে রাত ৯টা পর্যন্ত
+
+              </div>
+
+
+              <button
+                class="btn btn-primary doctor-btn appointment-btn"
+                data-doctor="ডা: মেহেদী হক"
+              >
+                অ্যাপয়েন্টমেন্ট নিন
+              </button>
+
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GALLERY
+    ====================================================== -->
+
+    <section
+      class="section gallery"
+      id="gallery"
+    >
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+          <span class="section-tag">
+            আমাদের গ্যালারি
+          </span>
+
+          <h2>
+            কলিন্স ডায়াগনস্টিকের কিছু মুহূর্ত
+          </h2>
+
+          <p>
+            আমাদের সেন্টার ও কার্যক্রমের কিছু ছবি
+            গ্যালারিতে দেখুন।
+          </p>
+
+        </div>
+
+
+
+        <div class="gallery-grid">
+
+
+          <!-- GALLERY 1 -->
+
+          <div class="gallery-item">
+
+            <img
+              src=".//WhatsApp Image 2026-10-06 at 10.16.39 PM.jpeg"
+              alt="কলিন্স ডায়াগনস্টিক"
+            >
+
+            <div class="gallery-overlay">
+
+              <span>
+                সেন্টারের পরিবেশ
+              </span>
+
+              <i>
+                +
+              </i>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- GALLERY 2 -->
+
+          <div class="gallery-item">
+
+            <img
+              src=".//WhatsApp Image 2026-10-06 at 10.12.19 PM.jpeg"
+              alt="কলিন্স ডায়াগনস্টিক"
+            >
+
+            <div class="gallery-overlay">
+
+              <span>
+                সেবার পরিবেশ
+              </span>
+
+              <i>
+                +
+              </i>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- GALLERY 3 -->
+
+          <div class="gallery-item">
+
+            <img
+              src=".//WhatsApp Image 2026-10-06 at 10.11.56 PM (1).jpeg"
+              alt="চিকিৎসা সেবা"
+            >
+
+            <div class="gallery-overlay">
+
+              <span>
+                চিকিৎসা সেবা
+              </span>
+
+              <i>
+                +
+              </i>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- GALLERY 4 -->
+
+          <div class="gallery-item">
+
+            <img
+              src=".//WhatsApp Image 2026-10-06 at 10.11.56 PM.jpeg"
+              alt="কলিন্স ডায়াগনস্টিক সেন্টার"
+            >
+
+            <div class="gallery-overlay">
+
+              <span>
+                আমাদের কার্যক্রম
+              </span>
+
+              <i>
+                +
+              </i>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WHY US
+    ====================================================== -->
+
+    <section
+      class="section"
+      id="why-us"
+    >
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+          <span class="section-tag">
+            কেন আমরা
+          </span>
+
+          <h2>
+            কেন কলিন্স ডায়াগনস্টিক?
+          </h2>
+
+          <p>
+            স্বাস্থ্যসেবা গ্রহণের অভিজ্ঞতাকে সহজ
+            ও স্বাচ্ছন্দ্যময় করার চেষ্টা করি আমরা।
+          </p>
+
+        </div>
+
+
+
+        <div class="why-grid">
+
+
+          <div class="why-card">
+
+            <div class="why-number">
+              ০১
+            </div>
+
+            <h3>
+              যোগ্য চিকিৎসক
+            </h3>
+
+            <p>
+              বিভিন্ন বিষয়ে চিকিৎসকদের
+              পরামর্শ নেওয়ার সুযোগ।
+            </p>
+
+          </div>
+
+
+
+          <div class="why-card">
+
+            <div class="why-number">
+              ০২
+            </div>
+
+            <h3>
+              সহজ অ্যাপয়েন্টমেন্ট
+            </h3>
+
+            <p>
+              হোয়াটসঅ্যাপের মাধ্যমে
+              সহজে যোগাযোগ করতে পারবেন।
+            </p>
+
+          </div>
+
+
+
+          <div class="why-card">
+
+            <div class="why-number">
+              ০৩
+            </div>
+
+            <h3>
+              সহজ যোগাযোগ
+            </h3>
+
+            <p>
+              ফোন, হোয়াটসঅ্যাপ ও
+              সরাসরি যোগাযোগের সুবিধা।
+            </p>
+
+          </div>
+
+
+
+          <div class="why-card">
+
+            <div class="why-number">
+              ০৪
+            </div>
+
+            <h3>
+              দীর্ঘ সময় সেবা
+            </h3>
+
+            <p>
+              প্রতিদিন সকাল ৮টা থেকে
+              রাত ৯টা পর্যন্ত।
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROCESS
+    ====================================================== -->
+
+    <section class="section process">
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+          <span class="section-tag">
+            অ্যাপয়েন্টমেন্ট প্রক্রিয়া
+          </span>
+
+          <h2>
+            মাত্র ৩টি সহজ ধাপ
+          </h2>
+
+        </div>
+
+
+
+        <div class="process-grid">
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              ১
+            </div>
+
+            <div>
+
+              <h3>
+                চিকিৎসক নির্বাচন করুন
+              </h3>
+
+              <p>
+                আপনার প্রয়োজন অনুযায়ী
+                চিকিৎসক নির্বাচন করুন।
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              ২
+            </div>
+
+            <div>
+
+              <h3>
+                তথ্য দিন
+              </h3>
+
+              <p>
+                আপনার নাম, ফোন নম্বর ও
+                প্রয়োজনীয় তথ্য দিন।
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              ৩
+            </div>
+
+            <div>
+
+              <h3>
+                হোয়াটসঅ্যাপে পাঠান
+              </h3>
+
+              <p>
+                তথ্য পাঠানোর পর
+                পরবর্তী নির্দেশনা নিন।
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CTA
+    ====================================================== -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <div class="cta-content">
+
+          <h2>
+            স্বাস্থ্য নিয়ে অপেক্ষা নয়,
+            আজই যোগাযোগ করুন
+          </h2>
+
+
+          <p>
+            আপনার প্রয়োজনীয় চিকিৎসা পরামর্শের জন্য
+            আমাদের সাথে যোগাযোগ করুন।
+          </p>
+
+
+          <a
+            href="#"
+            class="btn appointment-btn"
+          >
+            📅 অ্যাপয়েন্টমেন্ট নিন
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section
+      class="section contact"
+      id="contact"
+    >
+
+      <div class="container contact-grid">
+
+
+        <div class="contact-info">
+
+
+          <span class="section-tag">
+            যোগাযোগ
+          </span>
+
+
+          <h2>
+            আমাদের সাথে যোগাযোগ করুন
+          </h2>
+
+
+          <p>
+            অ্যাপয়েন্টমেন্ট, চিকিৎসক বা
+            অন্যান্য তথ্যের জন্য
+            সরাসরি আমাদের সাথে যোগাযোগ করতে পারেন।
+          </p>
+
+
+
+          <!-- ADDRESS -->
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              ⌖
+            </div>
+
+            <div>
+
+              <strong>
+                ঠিকানা
+              </strong>
+
+              <span>
+                বাইপাস মোড়, রাজাপুর, ঝালকাঠি
+              </span>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- PHONE -->
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              ☎
+            </div>
+
+            <div>
+
+              <strong>
+                মোবাইল
+              </strong>
+
+              <a href="tel:01630105000">
+                01630105000
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- WHATSAPP -->
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              ◉
+            </div>
+
+            <div>
+
+              <strong>
+                হোয়াটসঅ্যাপ
+              </strong>
+
+              <a
+                href="https://wa.me/8801630105000"
+                target="_blank"
+              >
+                01630105000
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- HOURS -->
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              ◷
+            </div>
+
+            <div>
+
+              <strong>
+                খোলার সময়
+              </strong>
+
+              <span>
+                প্রতিদিন সকাল ০৮:০০ – রাত ০৯:০০
+              </span>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- FACEBOOK -->
+
+          <a
+            href="https://www.facebook.com/share/18QADLLqh2/"
+            target="_blank"
+            class="btn btn-outline"
+          >
+            ফেসবুক পেজ দেখুন
+          </a>
+
+
+        </div>
+
+
+
+        <!-- GOOGLE MAP -->
+
+        <div class="map-box">
+
+          <iframe
+            src="https://www.google.com/maps?q=H48Q%2BQX8%2C%20Bypass%20Rd%2C%20Rajapur&output=embed"
+            loading="lazy"
+            allowfullscreen=""
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+
+      <div class="footer-grid">
+
+
+        <!-- FOOTER BRAND -->
+
+        <div class="footer-brand">
+
+          <h3>
+            কলিন্স ডায়াগনস্টিক
+          </h3>
+
+          <p>
+
+            এন্ড কনসালটেশন সেন্টার।
+            বাইপাস মোড়, রাজাপুর, ঝালকাঠি।
+            আপনার সুস্থতার জন্য নির্ভরযোগ্য
+            স্বাস্থ্যসেবার ঠিকানা।
+
+          </p>
+
+        </div>
+
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-col">
+
+          <h4>
+            দ্রুত লিংক
+          </h4>
+
+
+          <a href="#home">
+            হোম
+          </a>
+
+          <a href="#about">
+            আমাদের সম্পর্কে
+          </a>
+
+          <a href="#services">
+            সেবাসমূহ
+          </a>
+
+          <a href="#doctors">
+            চিকিৎসক
+          </a>
+
+          <a href="#gallery">
+            গ্যালারি
+          </a>
+
+          <a href="#contact">
+            যোগাযোগ
+          </a>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-col">
+
+          <h4>
+            যোগাযোগ
+          </h4>
+
+
+          <a href="tel:01630105000">
+            01630105000
+          </a>
+
+
+          <a
+            href="https://wa.me/8801630105000"
+            target="_blank"
+          >
+            হোয়াটসঅ্যাপ
+          </a>
+
+
+          <a href="#contact">
+            বাইপাস মোড়, রাজাপুর
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- FOOTER BOTTOM -->
+
+      <div class="footer-bottom">
+
+
+        <div>
+
+          ©
+          <span id="year"></span>
+
+          কলিন্স ডায়াগনস্টিক
+          এন্ড কনসালটেশন সেন্টার।
+
+          সর্বস্বত্ব সংরক্ষিত।
+
+        </div>
+
+
+        <div class="footer-credit">
+
+          Powered by
+
+          <strong>
+            <a href="tel:01354464300">
+              Nexera Tech
+            </a>
+          </strong>
+
+          ·
+
+          <a href="tel:01354464300">
+            01354464300
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =======================================================
+       FLOATING WHATSAPP
+  ======================================================== -->
+
+  <a
+    href="https://wa.me/8801630105000"
+    target="_blank"
+    class="whatsapp-float"
+    aria-label="হোয়াটসঅ্যাপে যোগাযোগ করুন"
+  >
+    ◉
+  </a>
+
+
+
+  <!-- =======================================================
+       APPOINTMENT MODAL
+  ======================================================== -->
+
+  <div
+    class="modal"
+    id="appointmentModal"
+  >
+
+
+    <div class="modal-box">
+
+
+      <button
+        class="modal-close"
+        id="modalClose"
+      >
+        ×
+      </button>
+
+
+      <h2>
+        অ্যাপয়েন্টমেন্ট নিন
+      </h2>
+
+
+      <p>
+        নিচের তথ্যগুলো পূরণ করে
+        হোয়াটসঅ্যাপে পাঠিয়ে দিন।
+      </p>
+
+
+
+      <form id="appointmentForm">
+
+
+        <!-- PATIENT NAME -->
+
+        <div class="form-group">
+
+          <label for="patientName">
+            রোগীর নাম *
+          </label>
+
+          <input
+            type="text"
+            id="patientName"
+            placeholder="আপনার নাম লিখুন"
+            required
+          >
+
+        </div>
+
+
+
+        <!-- PHONE -->
+
+        <div class="form-group">
+
+          <label for="patientPhone">
+            মোবাইল নম্বর *
+          </label>
+
+          <input
+            type="tel"
+            id="patientPhone"
+            placeholder="01XXXXXXXXX"
+            required
+          >
+
+        </div>
+
+
+
+        <!-- DOCTOR -->
+
+        <div class="form-group">
+
+          <label for="doctorSelect">
+            চিকিৎসক নির্বাচন করুন *
+          </label>
+
+
+          <select
+            id="doctorSelect"
+            required
+          >
+
+            <option value="">
+              চিকিৎসক নির্বাচন করুন
+            </option>
+
+
+            <option value="ডা: ফারাহ মান্নান মম">
+              ডা: ফারাহ মান্নান মম
+            </option>
+
+
+            <option value="ডা: এস. ডব্লিউ ফয়সাল আহমেদ">
+              ডা: এস. ডব্লিউ ফয়সাল আহমেদ
+            </option>
+
+
+            <option value="ডা: শেখ ফারুক আল শাহেদ">
+              ডা: শেখ ফারুক আল শাহেদ
+            </option>
+
+
+            <option value="ডা: মেহেদী হক">
+              ডা: মেহেদী হক
+            </option>
+
+
+          </select>
+
+        </div>
+
+
+
+        <!-- DATE -->
+
+        <div class="form-group">
+
+          <label for="visitDate">
+            পছন্দের তারিখ
+          </label>
+
+          <input
+            type="date"
+            id="visitDate"
+          >
+
+        </div>
+
+
+
+        <!-- MESSAGE -->
+
+        <div class="form-group">
+
+          <label for="patientMessage">
+            অতিরিক্ত তথ্য
+          </label>
+
+          <textarea
+            id="patientMessage"
+            placeholder="প্রয়োজনীয় তথ্য লিখুন..."
+          ></textarea>
+
+        </div>
+
+
+
+        <!-- SUBMIT -->
+
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="width:100%;"
+        >
+          হোয়াটসঅ্যাপে পাঠান
+        </button>
+
+
+      </form>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =======================================================
+       GALLERY LIGHTBOX
+  ======================================================== -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+  >
+
+
+    <button
+      class="lightbox-close"
+      id="lightboxClose"
+    >
+      ×
+    </button>
+
+
+    <img
+      id="lightboxImage"
+      src=""
+      alt="গ্যালারি ছবি"
+    >
+
+
+  </div>
+
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+
+    /* =========================================================
+       MOBILE MENU
+    ========================================================= */
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+
+    menuToggle.addEventListener(
+      "click",
+      () => {
+
+        mobileMenu.classList.toggle("active");
+
+
+        if (
+          mobileMenu.classList.contains("active")
+        ) {
+
+          menuToggle.textContent = "×";
+
+        } else {
+
+          menuToggle.textContent = "☰";
+
+        }
+
+      }
+    );
+
+
+
+    /* Close menu */
+
+    document
+      .querySelectorAll(".mobile-menu a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            mobileMenu
+              .classList
+              .remove("active");
+
+            menuToggle.textContent = "☰";
+
+          }
+        );
+
+      });
+
+
+
+    /* =========================================================
+       APPOINTMENT MODAL
+    ========================================================= */
+
+    const modal =
+      document.getElementById("appointmentModal");
+
+    const modalClose =
+      document.getElementById("modalClose");
+
+    const appointmentButtons =
+      document.querySelectorAll(".appointment-btn");
+
+    const doctorSelect =
+      document.getElementById("doctorSelect");
+
+
+
+    appointmentButtons.forEach(
+      button => {
+
+        button.addEventListener(
+          "click",
+          event => {
+
+            event.preventDefault();
+
+
+            const selectedDoctor =
+              button.getAttribute("data-doctor");
+
+
+            if (selectedDoctor) {
+
+              doctorSelect.value =
+                selectedDoctor;
+
+            }
+
+
+            modal.classList.add("active");
+
+          }
+        );
+
+      }
+    );
+
+
+
+    /* Close modal */
+
+    modalClose.addEventListener(
+      "click",
+      () => {
+
+        modal.classList.remove("active");
+
+      }
+    );
+
+
+
+    /* Click outside */
+
+    modal.addEventListener(
+      "click",
+      event => {
+
+        if (
+          event.target === modal
+        ) {
+
+          modal.classList.remove("active");
+
+        }
+
+      }
+    );
+
+
+
+    /* =========================================================
+       WHATSAPP APPOINTMENT
+    ========================================================= */
+
+    const appointmentForm =
+      document.getElementById("appointmentForm");
+
+
+    appointmentForm.addEventListener(
+      "submit",
+      event => {
+
+        event.preventDefault();
+
+
+        const name =
+          document
+            .getElementById("patientName")
+            .value
+            .trim();
+
+
+        const phone =
+          document
+            .getElementById("patientPhone")
+            .value
+            .trim();
+
+
+        const doctor =
+          document
+            .getElementById("doctorSelect")
+            .value;
+
+
+        const date =
+          document
+            .getElementById("visitDate")
+            .value;
+
+
+        const message =
+          document
+            .getElementById("patientMessage")
+            .value
+            .trim();
+
+
+
+        /* Validation */
+
+        if (
+          !name ||
+          !phone ||
+          !doctor
+        ) {
+
+          alert(
+            "দয়া করে প্রয়োজনীয় তথ্য পূরণ করুন।"
+          );
+
+          return;
+
+        }
+
+
+
+        /* WhatsApp Message */
+
+        let whatsappMessage =
+`আসসালামু আলাইকুম।
+
+আমি কলিন্স ডায়াগনস্টিক এন্ড কনসালটেশন সেন্টারে অ্যাপয়েন্টমেন্ট নিতে চাই।
+
+👤 রোগীর নাম: ${name}
+📱 মোবাইল নম্বর: ${phone}
+👨‍⚕️ চিকিৎসক: ${doctor}`;
+
+
+        if (date) {
+
+          whatsappMessage +=
+            `\n📅 পছন্দের তারিখ: ${date}`;
+
+        }
+
+
+        if (message) {
+
+          whatsappMessage +=
+            `\n📝 অতিরিক্ত তথ্য: ${message}`;
+
+        }
+
+
+        whatsappMessage +=
+          `\n\nধন্যবাদ।`;
+
+
+
+        const whatsappURL =
+          "https://wa.me/8801630105000?text=" +
+          encodeURIComponent(
+            whatsappMessage
+          );
+
+
+
+        window.open(
+          whatsappURL,
+          "_blank"
+        );
+
+
+        modal.classList.remove("active");
+
+      }
+    );
+
+
+
+    /* =========================================================
+       GALLERY LIGHTBOX
+    ========================================================= */
+
+    const galleryItems =
+      document.querySelectorAll(
+        ".gallery-item"
+      );
+
+
+    const lightbox =
+      document.getElementById(
+        "lightbox"
+      );
+
+
+    const lightboxImage =
+      document.getElementById(
+        "lightboxImage"
+      );
+
+
+    const lightboxClose =
+      document.getElementById(
+        "lightboxClose"
+      );
+
+
+
+    galleryItems.forEach(
+      item => {
+
+        item.addEventListener(
+          "click",
+          () => {
+
+            const image =
+              item.querySelector("img");
+
+
+            lightboxImage.src =
+              image.src;
+
+
+            lightboxImage.alt =
+              image.alt;
+
+
+            lightbox.classList.add(
+              "active"
+            );
+
+          }
+        );
+
+      }
+    );
+
+
+
+    /* Close lightbox */
+
+    lightboxClose.addEventListener(
+      "click",
+      () => {
+
+        lightbox.classList.remove(
+          "active"
+        );
+
+      }
+    );
+
+
+
+    /* Click outside */
+
+    lightbox.addEventListener(
+      "click",
+      event => {
+
+        if (
+          event.target === lightbox
+        ) {
+
+          lightbox.classList.remove(
+            "active"
+          );
+
+        }
+
+      }
+    );
+
+
+
+    /* =========================================================
+       ESC KEY
+    ========================================================= */
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (event.key === "Escape") {
+
+          modal.classList.remove(
+            "active"
+          );
+
+          lightbox.classList.remove(
+            "active"
+          );
+
+        }
+
+      }
+    );
+
+
+
+    /* =========================================================
+       CURRENT YEAR
+    ========================================================= */
+
+    document.getElementById(
+      "year"
+    ).textContent =
+      new Date().getFullYear();
+
+
+  </script>
+
+</body>
+</html>
